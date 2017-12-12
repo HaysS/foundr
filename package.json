@@ -1,0 +1,19 @@
+{
+  "name": "chainpointers-server",
+  "version": "1.0.0",
+  "description": "Back-end for chainpointers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaysS/chainpointers-server.git"
+  },
+  "author": "Hays Stanford, Andy Cary, Brian Cary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaysS/chainpointers-server/issues"
+  },
+  "homepage": "https://github.com/HaysS/chainpointers-server#readme"
+}
