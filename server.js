@@ -18,6 +18,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 const posts = require('./routes/posts.js')
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.use('/posts', posts);
 
 //Connect to db and start server once done
