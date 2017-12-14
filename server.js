@@ -7,19 +7,22 @@ const app = express();
 
 const port = 8000;
 
-app.use(bodyParser.urlencoded({ extended: true }));
-
+//Connect to mongoDB database
 mongoose.connect(databaseConfig.url);
 const db = mongoose.connection;
 
-
+//Bind mongoose errors to console for easy viewing
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
+//Include routes
+const posts = require('./routes/posts.js')
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/posts', posts);
+
+//Connect to db and start server once done
 db.once('open', () => {
 	console.log('Database connection successful')
-
-	//Include routes
-	require('./app/routes')(app, db);
 
 	//Start server
 	app.listen(port, () => {
