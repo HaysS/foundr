@@ -15,12 +15,12 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 //Include routes
-const posts = require('./routes/posts.js')
+const api = require('./api/index.js')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use('/posts', posts);
+app.use('/api', api);
 
 //Connect to db and start server once done
 db.once('open', () => {
