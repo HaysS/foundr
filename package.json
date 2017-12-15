@@ -23,6 +23,7 @@
     "express": "^4.16.2",
     "mongodb": "^3.0.0-rc0",
     "mongoose": "^4.13.7",
+    "normalize.css": "^7.0.0",
     "swagger-ui": "^3.6.1"
   },
   "devDependencies": {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Post from '../components/Post';
-import '../css/App.css';
 
 const dateFormat = require('dateformat');
 
@@ -28,21 +27,65 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="App">
-				<header className="App-header">
-			  		<h1 className="App-title">ChainPointers</h1>
-				</header>
-				<h4>Posts:</h4>
+			<div className="container-fluid">
+				{/*Navbar*/}
+				<nav className="navbar navbar-default">
+					<a class="navbar-brand" href="#">ChainPointers</a>
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="#">Getting Started</a></li>
+						<li><a href="#">Development Guides</a></li>
+						<li><a href="#">Investing Tutorials</a></li>
+						<li><a href="#">Simple Explanations</a></li>
+					</ul>
+				</nav>
+
+				{/*Main Showcase Area*/}
+				<div class="jumbotron">
+				  <h1 class="display-3">Learn How Bitcoin Works.</h1>
+				  <h2 class="display-3">Make Money Using Your Knowledge.</h2>
+				  <hr class="my-4" />
+				  <p>Find out what drives the value of digital currency. Get the facts, then learn how to apply the concepts.</p>
+				  <p class="lead">
+				    <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+				  </p>
+				</div>
+
+				{/*Featured Content Area Wtih 2 Panels*/}
+				<div class="col-md-6">
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Panel title</h3>
+					  </div>
+					  <div class="panel-body">
+					    Panel content
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Panel title</h3>
+					  </div>
+					  <div class="panel-body">
+					    Panel content
+					  </div>
+					</div>
+				</div>
+
 				{
-					this.state.posts.map((post) => {
-						return (
-							<Post post={ post } />
-						)
-					})
+					// this.state.posts.map((post) => {
+					// 	return (
+					// 		<Post post={ post } />
+					// 	)
+					// })
 				}
-				<footer className="App-footer">
-					<p>ChainPointers 2017</p>
-				</footer>
+
+				{/*Footer Area*/}
+				<div class="panel">
+					<div class="panel-title">
+						<p className="text-center">ChainPointers 2017</p>
+					</div>
+				</div>
 			</div>
 		);
 	}
