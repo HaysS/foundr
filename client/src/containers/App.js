@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Post from '../components/Post';
 import '../css/App.css';
 
 const dateFormat = require('dateformat');
@@ -32,23 +33,16 @@ class App extends Component {
 			  		<h1 className="App-title">ChainPointers</h1>
 				</header>
 				<h4>Posts:</h4>
-				{console.log(this.state.posts)}
 				{
-					this.state.posts.map((post) => 
-						{
-							return (
-								<div key={post._id}>
-									<h1 key={post._id+'h1'}>{post.content.title}</h1>
-									<p key={post._id+'info'}><strong key={post._id+'strong'}>Author: {post.content.author}</strong> | Last Updated: {
-										dateFormat(post.updated, "dddd, mmmm dS, yyyy, h:MM:ss TT")
-									}</p>
-									<p key={post._id+'body'}>{post.content.body}</p>
-									<p key={post._id+'hr'}>---------------------------------------------------------------</p>
-								</div>
-							)
-						}
-					)
+					this.state.posts.map((post) => {
+						return (
+							<Post post={ post } />
+						)
+					})
 				}
+				<footer className="App-footer">
+					<p>ChainPointers 2017</p>
+				</footer>
 			</div>
 		);
 	}
