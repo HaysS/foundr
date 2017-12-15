@@ -2,6 +2,8 @@ const Post = require("../models/post").Post
 
 //Get posts ordered by most recently updated first
 exports.getPosts = (req, res, next) => {
+	console.log('Getting posts from database.')
+	
 	Post.find({}, (err, posts) => {
 
 		//Sort by last updated date

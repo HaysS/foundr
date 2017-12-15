@@ -14,12 +14,22 @@ const db = mongoose.connection;
 //Bind mongoose errors to console for easy viewing
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-//Include routes
+//Import routes
 const api = require('./api/index.js')
 
+
+//Set header to allow data to be accessed from db
+app.use((req, res, next) => {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+});
+
+//Parse requests
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+//Include routes in app
 app.use('/api', api);
 
 //Connect to db and start server once done
