@@ -19,7 +19,6 @@
   "homepage": "https://github.com/HaysS/chainpointers-server#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "cosmicjs": "^2.4.22",
     "express": "^4.16.2",
     "mongodb": "^3.0.0-rc0",
     "mongoose": "^4.13.7",
