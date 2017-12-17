@@ -35,10 +35,22 @@ class Signup extends React.Component {
 
       		<div class="panel-body">
 		        <label>
-		          <input type="text" name="email" placeholder="Email" value={this.state.username} onChange={this.handleChange} />
+		          <input type="text" name="email"
+		          	placeholder="Email" 
+		          	pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" //Must be in email format
+		          	value={this.state.username} 
+		          	onChange={this.handleChange} 
+		          	required
+		          	/>
 		        </label>&nbsp;&nbsp;&nbsp;&nbsp;
 		        <label>
-		          <input type="text" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
+		          <input type="password" name="password" 
+		          	placeholder="Password" 
+		          	pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" //Must contain at least 1 number, 1 uppercase letter, 1 lowercase letter, and 8 or more characters
+		          	value={this.state.password} 
+		          	onChange={this.handleChange} 
+		          	required
+		          	/>
 		        </label>&nbsp;&nbsp;&nbsp;&nbsp;
 		        <input class="btn btn-primary btn-sm" type="submit" value="Submit" />
 	        </div>

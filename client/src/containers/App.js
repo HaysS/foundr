@@ -66,7 +66,8 @@ class App extends Component {
 							  <h1 class="display-3">Meet Local Developers.</h1>
 							  <h2 class="display-3">Start Projects Together Now.</h2>
 							  <hr class="my-4" />
-							  <p>Connect your GitHub profile to show what you can do.</p>
+							  <p>Make an account now and show what you can do.</p>
+
 							  {/*Signup Form*/}
 							  <Signup />
 							</div>
