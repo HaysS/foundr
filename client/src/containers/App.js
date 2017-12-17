@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Post from '../components/Post';
 
+import '../css/app.css';
+
 const dateFormat = require('dateformat');
 
 const API = 'http://localhost:8000/api'
@@ -30,11 +32,22 @@ class App extends Component {
 			<div className="container-fluid">
 				{/*Navbar*/}
 				<nav className="navbar navbar-default">
-					<a href="/" class="navbar-brand">Foundr</a>
-					<ul class="nav navbar-nav navbar-right" style={{paddingRight: "2rem"}}>
-						<li><a href="#">Log In</a></li>
-						<li><a href="#">Sign Up</a></li>
-					</ul>
+				<div class="row vertical-align">
+					<div class="col-md-4">
+						<a href="/" class="navbar-brand">Foundr</a>
+					</div>
+
+					<div class="col-md-4 text-center">
+						<img class="" src={require("../images/logo-512px.png")} height="27px" width="27px" />
+					</div>
+
+					<div class="col-md-4">
+						<ul class="nav navbar-nav navbar-right" style={{paddingRight: "2rem"}}>
+							<li><a href="#">Log In</a></li>
+							<li><a href="#">Sign Up</a></li>
+						</ul>
+					</div>
+					</div>
 				</nav>
 
 				{/*Main Content Area Wtih 2 Panels*/}
