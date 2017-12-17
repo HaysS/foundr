@@ -30,45 +30,39 @@ class App extends Component {
 			<div className="container-fluid">
 				{/*Navbar*/}
 				<nav className="navbar navbar-default">
-					<a class="navbar-brand" href="#">ChainPointers</a>
-					<ul class="nav navbar-nav navbar-left">
-						<li><a href="#">Getting Started</a></li>
-						<li><a href="#">Development Guides</a></li>
-						<li><a href="#">Investing Tutorials</a></li>
-						<li><a href="#">Simple Explanations</a></li>
+					<a href="/" class="navbar-brand">Foundr</a>
+					<ul class="nav navbar-nav navbar-right" style={{paddingRight: "2rem"}}>
+						<li><a href="#">Log In</a></li>
+						<li><a href="#">Sign Up</a></li>
 					</ul>
 				</nav>
 
-				{/*Main Showcase Area*/}
-				<div class="jumbotron">
-				  <h1 class="display-3">Learn How Bitcoin Works.</h1>
-				  <h2 class="display-3">Make Money Using Your Knowledge.</h2>
-				  <hr class="my-4" />
-				  <p>Find out what drives the value of digital currency. Get the facts, then learn how to apply the concepts.</p>
-				  <p class="lead">
-				    <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
-				  </p>
-				</div>
-
-				{/*Featured Content Area Wtih 2 Panels*/}
-				<div class="col-md-6">
-					<div class="panel panel-default">
-					  <div class="panel-heading">
-					    <h3 class="panel-title">Panel title</h3>
-					  </div>
-					  <div class="panel-body">
-					    Panel content
-					  </div>
+				{/*Main Content Area Wtih 2 Panels*/}
+				<div class="container-fluid">
+					{/*Left Column*/}
+					<div class="col-md-6">
+						{/*Main Showcase Area*/}
+						<div class="jumbotron">
+						  <h1 class="display-3">Meet Local Developers.</h1>
+						  <h2 class="display-3">Start Projects Together Now.</h2>
+						  <hr class="my-4" />
+						  <p>Connect your GitHub profile to show what you can do.</p>
+						  <p class="lead">
+						    <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+						  </p>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="panel panel-default">
-					  <div class="panel-heading">
-					    <h3 class="panel-title">Panel title</h3>
-					  </div>
-					  <div class="panel-body">
-					    Panel content
-					  </div>
+
+					{/*Right Column*/}
+					<div class="col-md-6">
+						<div class="panel panel-default">
+						  <div class="panel-heading">
+						    <h3 class="panel-title">Panel title</h3>
+						  </div>
+						  <div class="panel-body">
+						    Panel content
+						  </div>
+						</div>
 					</div>
 				</div>
 
