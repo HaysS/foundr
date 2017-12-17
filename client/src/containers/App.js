@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Post from '../components/Post';
+import User from '../components/User';
 
 import '../css/app.css';
 
@@ -8,22 +8,24 @@ const dateFormat = require('dateformat');
 const API = 'http://localhost:8000/api'
 
 class App extends Component {
-	state = {posts: []}
+	state = { users: [] }
 
 	componentDidMount() {
-		fetch(API+'/posts')		//Get and store posts from db using api proxy url in package.json
+		fetch(API+'/users')		//Get and store users from db using api proxy url in package.json
 			.then(res => res.json())
-			.then((postsJson) => {
-					const posts = postsJson.map((postJson) => {
-						const content = postJson.content
-						const id = postJson._id
-						const updated = postJson.updated
-						const post = {id, content, updated}
+			.then((usersJson) => {
+					const users = usersJson.map((userJson) => {
+						const username = userJson.username
+						const id = userJson._id
+						const github = userJson.github
+						const created = userJson.created
 
-						return post
+						const user = {id, username, id, github, created}
+
+						return user
 					})
 
-					this.setState({ posts })
+					this.setState({ users })
 				});
 	}
 
@@ -74,27 +76,22 @@ class App extends Component {
 						<div class="col-md-4">
 							<div class="panel panel-default">
 							  <div class="panel-heading">
-							    <h3 class="panel-title">Recently Joined:</h3>
+							    <h3 class="panel-title">Recently Joined</h3>
 							  </div>
 							  <div class="panel-body">
-							    User <br />
-							    User <br />
-							    User <br />
-							    User <br />
-							    User <br />
+							    {
+									this.state.users.map((user) => {
+										return (
+											<User user={ user } />
+										)
+									})
+								}
+							    <br />
 							  </div>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				{
-					// this.state.posts.map((post) => {
-					// 	return (
-					// 		<Post post={ post } />
-					// 	)
-					// })
-				}
 
 				{/*Footer Area*/}
 				<div class="panel">

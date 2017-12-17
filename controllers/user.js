@@ -4,8 +4,7 @@ const User = require("../models/user").User
 exports.getUsers = (req, res, next) => {
 	console.log('Getting users from database.')
 	
-	Post.find({}, (err, posts) => {
-
+	User.find({}, (err, users) => {
 		//Sort by last updated date
 		users.sort((a, b) => {
 			a = new Date(a.created.date);
@@ -13,7 +12,7 @@ exports.getUsers = (req, res, next) => {
 		    return a>b ? -1 : a<b ? 1 : 0;
 		})
 
-		res.send(posts);
+		res.send(users);
 	})
 }
 
@@ -23,7 +22,7 @@ exports.create = (req, res, next) => {
 	newUser.username = req.body.username;
 	newUser.password = req.body.password;
 	newUser.email = req.body.email;
-	newUser.password = req.body.password;
+	newUser.github = req.body.github;
 
 	console.log('Creating new post with the following data: ', req.body)
 
