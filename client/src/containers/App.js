@@ -33,14 +33,17 @@ class App extends Component {
 				{/*Navbar*/}
 				<nav className="navbar navbar-default">
 				<div class="row vertical-align">
+					{/*Left Nav Column*/}
 					<div class="col-md-4">
 						<a href="/" class="navbar-brand">Foundr</a>
 					</div>
 
+					{/*Middle Nav Column*/}
 					<div class="col-md-4 text-center">
 						<img class="" src={require("../images/logo-512px.png")} height="27px" width="27px" />
 					</div>
 
+					{/*Right Nav Column*/}
 					<div class="col-md-4">
 						<ul class="nav navbar-nav navbar-right" style={{paddingRight: "2rem"}}>
 							<li><a href="#">Log In</a></li>
@@ -53,7 +56,7 @@ class App extends Component {
 				{/*Main Content Area Wtih 2 Panels*/}
 				<div class="container-fluid">
 					{/*Left Column*/}
-					<div class="col-md-6">
+					<div class="col-md-8">
 						{/*Main Showcase Area*/}
 						<div class="jumbotron">
 						  <h1 class="display-3">Meet Local Developers.</h1>
@@ -67,7 +70,7 @@ class App extends Component {
 					</div>
 
 					{/*Right Column*/}
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<div class="panel panel-default">
 						  <div class="panel-heading">
 						    <h3 class="panel-title">Panel title</h3>
