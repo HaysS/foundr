@@ -77,7 +77,7 @@ class App extends Component {
 				{/*Footer Area*/}
 				<div class="panel">
 					<div class="panel-title">
-						<p className="text-center">ChainPointers 2017</p>
+						<p className="text-center">Foundr 2017</p>
 					</div>
 				</div>
 			</div>
