@@ -1,10 +1,10 @@
 const router = require('express').Router();
 
 router.get('/', function(req, res){    
-    res.send("Connected to ChainPointers API.");
+    res.send("Connected to Foundr API.");
 });
 
 //Group routers here
-router.use('/posts', require('./posts'))
+router.use('/users', require('./users'))
 
 module.exports = router;

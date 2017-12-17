@@ -1,8 +1,8 @@
-const controller = require('../controllers/posts');
+const controller = require('../controllers/user');
 const router = require('express').Router();
 
 router.route('/')
-	.get(controller.getPosts)
+	.get(controller.getUsers)
 	.post(controller.create)
 
 module.exports = router;
