@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import User from '../components/User';
+import Signup from '../components/Signup';
 
 import '../css/app.css';
 
@@ -66,9 +67,8 @@ class App extends Component {
 							  <h2 class="display-3">Start Projects Together Now.</h2>
 							  <hr class="my-4" />
 							  <p>Connect your GitHub profile to show what you can do.</p>
-							  <p class="lead">
-							    <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
-							  </p>
+							  {/*Signup Form*/}
+							  <Signup />
 							</div>
 						</div>
 
