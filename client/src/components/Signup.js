@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import * as Utils from '../utils/utils';
 import '../css/custom.css';
+
 
 const dateFormat = require('dateformat');
 const emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b/;
@@ -27,8 +29,11 @@ class Signup extends React.Component {
 
 		this.setState({submittedOnce: true})
 
-		if(emailRegex.test(this.state.email) && passwordRegex.test(this.state.password))
-			alert('Email of '+this.state.email+'and password of '+this.state.password+' have been submitted.');
+		if(emailRegex.test(this.state.email) && passwordRegex.test(this.state.password)) {
+			Utils.createAccount(this.state.email, this.state.password);
+
+			alert('Account made!')
+		}
 
 	}
 
